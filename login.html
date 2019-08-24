@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Management</title>
+	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+	<link rel="stylesheet" type="text/css" href="login.css">
+	<script type="text/javascript">
+	function validate()
+  {
+	var uname = document.getElementById("uname">;
+	var Email = document.getElementById("">;
+    var password = document.getElemenById("psw">;
+	
+	if(uname.value.trim()=="")
+	{
+	 alert(blank username");
+	 return false;
+	}
+	    elseif(Email.value.trim()=="")
+		{
+		alert("Blank Email");
+		return false;
+		}
+		else if(password.value.trim().length<5)
+		{
+		alert("Password too short");
+		return false;
+		}
+   }
+</script>
+</head>
+<body>
+	<header>Hotel Management System</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="room.html">Rooms</a></li>
+			<li><a href="#">Table</a></li>
+			<li><a href="#">Reservation</a></li>
+			<li><a href="food.html">Food</a></li>
+			<li><a href="#">Employee</a></li>
+			<li><a href="login.html">Log In</a></li>
+			<li><a href="#">Signup</a></li>
+		</ul>
+	</nav>
+			
+		<form onsubmit="return validate();" 
+		action="message.html">
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" value="" required>
+	
+	<label for="Email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="Email" value="" required>
+	
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" value="" required>
+	
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="#"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					·
+					<a href="room.html">Rooms</a>
+					·
+					<a href="#">Table</a>
+					·
+					<a href="#">Reservation</a>
+					·
+					<a href="food.html">Food</a>
+					·
+					<a href="#">Employee</a>
+					.
+					<a href="login.html">Log In</a>
+					<a href="#">Signup</a>
+				</p>
+
+				<p>Hotel Management System &copy; 2019</p>
+			</div>
+
+		</footer>
+</body>
+</html>
